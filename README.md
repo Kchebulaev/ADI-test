@@ -1,6 +1,8 @@
 # ADI-test
 Project was implemented based on **Serenity BDD** tutorial
-Tools used: 
+---
+
+**Tools used**: 
 * **Serenity BDD** as Selenium webdriver supplier and reporting tool
 * **Cucumber** framework as Gherkin language interpreter
 * **JUnit** as a test runner
