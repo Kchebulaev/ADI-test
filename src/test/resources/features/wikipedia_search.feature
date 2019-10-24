@@ -2,12 +2,12 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
     @RegressionSuite
     Scenario Outline: Searching wikipedia for fruits (Negative flow)
     Given I am on the Wikipedia landing page
-    When I search for <query>
+    When I search for <entry>
     Then I get error message <error message>
     And I see link for page creation
 
     Examples:
-      | query                     | error message                             |
+      | entry                     | error message                             |
       | 1234567899812947861238741 | There were no results matching the query. |
       | qazwsxedcrfv              | There were no results matching the query. |
 
