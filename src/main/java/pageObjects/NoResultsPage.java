@@ -7,11 +7,11 @@ import org.openqa.selenium.support.FindBy;
 
 @Data
 public class NoResultsPage extends PageObject {
+
     @FindBy(className = "searchresults")
     private WebElementFacade results;
 
     @FindBy(className = "mw-search-createlink")
     private WebElementFacade createLink;
-
 
 }

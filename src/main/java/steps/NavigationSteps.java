@@ -11,4 +11,5 @@ public class NavigationSteps {
     public void openWiki() {
         landing.open();
     }
+
 }

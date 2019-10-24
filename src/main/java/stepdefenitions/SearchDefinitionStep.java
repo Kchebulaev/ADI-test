@@ -58,4 +58,5 @@ public class SearchDefinitionStep {
     public void searchInputInEmpty() {
         assertThat(StringUtils.isEmpty(searchSteps.getSearchInput().getValue()));
     }
+
 }

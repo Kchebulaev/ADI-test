@@ -8,6 +8,7 @@ import pageObjects.NoResultsPage;
 import pageObjects.WikipediaLanding;
 
 public class SearchSteps {
+
     private WikipediaLanding landingPage;
     private ArticlePage articlePage;
     private NoResultsPage noResultsPage;

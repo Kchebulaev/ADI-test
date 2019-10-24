@@ -12,11 +12,12 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://en.wikipedia.org")
 @NamedUrls(
         {
-                @NamedUrl(name = "open.article", url = "/issues/{1}")
+                @NamedUrl(name = "open.article", url = "/wiki/{1}")
         }
 )
 @Data
 public class ArticlePage extends PageObject {
+
     @FindBy(tagName = "h1")
     private WebElementFacade articleTitle;
 
