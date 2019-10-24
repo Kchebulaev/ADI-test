@@ -22,7 +22,7 @@ public class SearchSteps {
 
     @Step("Get article title text")
     public String getTitle() {
-        return articlePage.getTitle().getText();
+        return articlePage.getArticleTitle().getText();
     }
 
     @Step("Verify error message is displayed and has the right text")

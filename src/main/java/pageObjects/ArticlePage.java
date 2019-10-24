@@ -18,14 +18,14 @@ import org.openqa.selenium.support.FindBy;
 @Data
 public class ArticlePage extends PageObject {
     @FindBy(tagName = "h1")
-    private WebElementFacade title;
+    private WebElementFacade articleTitle;
 
     @FindBy(id = "mw-content-text")
     private WebElementFacade content;
 
     @WhenPageOpens
     public void waitUntilTitleAppears() {
-        element(getTitle()).waitUntilVisible();
+        element(getArticleTitle()).waitUntilVisible();
     }
 
 }
