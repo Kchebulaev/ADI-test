@@ -21,8 +21,8 @@ public class ArticlePage extends PageObject {
     @FindBy(tagName = "h1")
     private WebElementFacade articleTitle;
 
-    @FindBy(id = "mw-content-text")
-    private WebElementFacade content;
+    @FindBy(id = "toc")
+    private WebElementFacade tableOfContent;
 
     @WhenPageOpens
     public void waitUntilTitleAppears() {

@@ -17,7 +17,7 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
       Given I am on the Wikipedia landing page
       When I search for <entry>
       Then I get article with title <entry>
-      And I see content of the page
+      And I see table of content of the page
 
     Examples:
       | entry  |

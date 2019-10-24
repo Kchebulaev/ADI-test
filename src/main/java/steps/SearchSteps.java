@@ -3,7 +3,6 @@ package steps;
 import lombok.Getter;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
-import org.assertj.core.api.Assertions;
 import pageObjects.ArticlePage;
 import pageObjects.NoResultsPage;
 import pageObjects.WikipediaLanding;
@@ -35,9 +34,9 @@ public class SearchSteps {
         return noResultsPage.getResults();
     }
 
-    @Step("Get article content")
-    public WebElementFacade getContent() {
-        return articlePage.getContent();
+    @Step("Get article Table of Content")
+    public WebElementFacade getTableOfContent() {
+        return articlePage.getTableOfContent();
     }
 
     @Step("Get search input field")
