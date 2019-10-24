@@ -1,5 +1,6 @@
 package pageObjects;
 
+import lombok.Data;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.NamedUrl;
@@ -14,16 +15,17 @@ import org.openqa.selenium.support.FindBy;
                 @NamedUrl(name = "open.article", url = "/issues/{1}")
         }
 )
+@Data
 public class ArticlePage extends PageObject {
     @FindBy(tagName = "h1")
-    public WebElementFacade title;
+    private WebElementFacade title;
 
     @FindBy(id = "mw-content-text")
-    public WebElementFacade content;
+    private WebElementFacade content;
 
     @WhenPageOpens
     public void waitUntilTitleAppears() {
-        element(title).waitUntilVisible();
+        element(getTitle()).waitUntilVisible();
     }
 
 }

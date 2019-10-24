@@ -17,33 +17,33 @@ public class SearchSteps {
         WebElementFacade input = getSearchInput();
         input.clear();
         input.sendKeys(query);
-        landingPage.submit.click();
+        landingPage.getSubmit().click();
     }
 
     @Step("Get article title text")
     public String getTitle() {
-        return articlePage.title.getText();
+        return articlePage.getTitle().getText();
     }
 
     @Step("Verify error message is displayed and has the right text")
     public void verifyErrorMessage(String errorText) {
-        Assertions.assertThat(noResultsPage.results.isDisplayed());
-        Assertions.assertThat(noResultsPage.results.getText().contains(errorText));
+        Assertions.assertThat(noResultsPage.getResults().isDisplayed());
+        Assertions.assertThat(noResultsPage.getResults().getText().contains(errorText));
     }
 
     @Step("Get article content")
     public WebElementFacade getContent() {
-        return articlePage.content;
+        return articlePage.getContent();
     }
 
     @Step("Get search input field")
     public WebElementFacade getSearchInput() {
-        return landingPage.input;
+        return landingPage.getInput();
     }
 
     @Step("Get new article creation link")
     public WebElementFacade getNewArticleLink() {
-        return noResultsPage.createLink;
+        return noResultsPage.getCreateLink();
     }
 
 }

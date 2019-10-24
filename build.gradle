@@ -35,7 +35,8 @@ dependencies {
             libs.test.serenity.cucumber,
             libs.test.junit,
             libs.test.assertj
-
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
 }
 
 test {
