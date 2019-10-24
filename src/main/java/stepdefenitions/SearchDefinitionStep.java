@@ -31,32 +31,33 @@ public class SearchDefinitionStep {
 
     @Then("^I get article with title (.*)$")
     public void verifyTitle(String query) {
-        assertThat((searchSteps.getTitle()).equals(query));
+        assertThat((searchSteps.getTitle()).equals(query)).isTrue();
     }
 
     @Then("^I get error message(.*)$")
     public void checkErrorMessage(String errorMessage) {
-        searchSteps.verifyErrorMessage(errorMessage);
+        assertThat(searchSteps.getNoResultsElement().isDisplayed()).isTrue();
+        assertThat(searchSteps.getNoResultsElement().getTextContent().contains(errorMessage)).isTrue();
     }
 
     @And("^I see content of the page$")
     public void iSeeContentOfThePage() {
-        assertThat(searchSteps.getContent().isDisplayed());
+        assertThat(searchSteps.getContent().isDisplayed()).isTrue();
     }
 
     @And("^I see link for page creation$")
     public void iSeeLinkForPageCreation() {
-        assertThat(searchSteps.getNewArticleLink().isDisplayed());
+        assertThat(searchSteps.getNewArticleLink().isDisplayed()).isTrue();
     }
 
     @Then("^I see search input$")
     public void iSeeSearchInput() {
-        assertThat(searchSteps.getSearchInput().isDisplayed());
+        assertThat(searchSteps.getSearchInput().isDisplayed()).isTrue();
     }
 
     @And("^Search input in empty$")
-    public void searchInputInEmpty() {
-        assertThat(StringUtils.isEmpty(searchSteps.getSearchInput().getValue()));
+    public void searchInputIsEmpty() {
+        assertThat(StringUtils.isEmpty(searchSteps.getSearchInput().getValue())).isTrue();
     }
 
 }

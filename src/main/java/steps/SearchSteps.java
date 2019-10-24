@@ -1,5 +1,6 @@
 package steps;
 
+import lombok.Getter;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.Assertions;
@@ -7,6 +8,9 @@ import pageObjects.ArticlePage;
 import pageObjects.NoResultsPage;
 import pageObjects.WikipediaLanding;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+@Getter
 public class SearchSteps {
 
     private WikipediaLanding landingPage;
@@ -26,10 +30,9 @@ public class SearchSteps {
         return articlePage.getArticleTitle().getText();
     }
 
-    @Step("Verify error message is displayed and has the right text")
-    public void verifyErrorMessage(String errorText) {
-        Assertions.assertThat(noResultsPage.getResults().isDisplayed());
-        Assertions.assertThat(noResultsPage.getResults().getText().contains(errorText));
+    @Step("Get no results element")
+    public WebElementFacade getNoResultsElement() {
+        return noResultsPage.getResults();
     }
 
     @Step("Get article content")

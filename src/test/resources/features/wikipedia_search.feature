@@ -1,10 +1,10 @@
 Feature: As a User I want to go to Wikipedia and search for a few fruits
     @RegressionSuite
     Scenario Outline: Searching wikipedia for fruits (Negative flow)
-    Given I am on the Wikipedia landing page
-    When I search for <entry>
-    Then I get error message <error message>
-    And I see link for page creation
+      Given I am on the Wikipedia landing page
+      When I search for <entry>
+      Then I get error message <error message>
+      And I see link for page creation
 
     Examples:
       | entry                     | error message                             |
@@ -14,10 +14,10 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
 
     @RegressionSuite @SmokeSuite
     Scenario Outline: Searching wikipedia for fruits (Positive flow)
-    Given I am on the Wikipedia landing page
-    When I search for <entry>
-    Then I get article with title <entry>
-    And I see content of the page
+      Given I am on the Wikipedia landing page
+      When I search for <entry>
+      Then I get article with title <entry>
+      And I see content of the page
 
     Examples:
       | entry  |
